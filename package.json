@@ -2,16 +2,20 @@
   "name": "app-search-reference-ui-react",
   "version": "1.2.0",
   "license": "Apache-2.0",
+  "homepage": "https://seanstory.github.io/aon-react-demo-ui",
   "private": true,
   "dependencies": {
     "@elastic/react-search-ui": "1.4.1",
     "@elastic/search-ui-app-search-connector": "1.4.1",
+    "gh-pages": "^3.1.0",
     "prop-types": "^15.6.2",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
     "react-scripts": "^3.4.1"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build-css": "node-sass-chokidar src/ -o src/",
     "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
     "start": "react-scripts start",
