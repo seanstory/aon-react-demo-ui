@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/aon-react-demo-ui/static/css/main.3847cbad.css",
+    "main.js": "/aon-react-demo-ui/static/js/main.6e2192d6.js",
+    "main.js.map": "/aon-react-demo-ui/static/js/main.6e2192d6.js.map",
+    "index.html": "/aon-react-demo-ui/index.html",
+    "precache-manifest.e8dee5fa5be73d79bf77eb6f9be6ffb5.js": "/aon-react-demo-ui/precache-manifest.e8dee5fa5be73d79bf77eb6f9be6ffb5.js",
+    "service-worker.js": "/aon-react-demo-ui/service-worker.js",
+    "static/css/main.3847cbad.css.map": "/aon-react-demo-ui/static/css/main.3847cbad.css.map",
+    "static/js/main.6e2192d6.js.LICENSE.txt": "/aon-react-demo-ui/static/js/main.6e2192d6.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/css/main.3847cbad.css",
+    "static/js/main.6e2192d6.js"
+  ]
+}
