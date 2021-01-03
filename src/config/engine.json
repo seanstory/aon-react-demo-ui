@@ -1,0 +1,20 @@
+{
+  "engineName": "aon",
+  "endpointBase": "https://e4cee4e7dc254bee9bb1b070f6a24596.ent-search.us-east-1.aws.staging.foundit.no",
+  "searchKey": "search-j87jzw7r8xtnyc8rn2rnxmrq",
+  "sortFields": [
+
+  ],
+  "facets": [
+
+  ],
+  "titleField": "title",
+  "urlField": "url",
+  "resultFields": [
+    "meta_description"
+  ],
+  "querySuggestFields": [
+    "meta_keywords",
+    "meta_description"
+  ]
+}
