@@ -1,7 +1,7 @@
 {
-  "engineName": "aon",
-  "endpointBase": "https://e4cee4e7dc254bee9bb1b070f6a24596.ent-search.us-east-1.aws.staging.foundit.no",
-  "searchKey": "search-j87jzw7r8xtnyc8rn2rnxmrq",
+  "engineName": "archives-of-nethys",
+  "endpointBase": "https://af6fbe75a35a46b897e0f810b29b4fc0.ent-search.europe-west1.gcp.cloud.es.io",
+  "searchKey": "search-9hw5iyis8d4yhz6aq5zx5otz",
   "sortFields": [
 
   ],
