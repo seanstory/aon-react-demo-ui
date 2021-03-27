@@ -1,20 +1,23 @@
 {
-  "engineName": "archives-of-nethys",
+  "engineName": "aon-non-crawl",
   "endpointBase": "https://af6fbe75a35a46b897e0f810b29b4fc0.ent-search.europe-west1.gcp.cloud.es.io",
   "searchKey": "search-9hw5iyis8d4yhz6aq5zx5otz",
   "sortFields": [
 
   ],
   "facets": [
-
+    "keywords",
+    "category",
+    "sub_category"
   ],
   "titleField": "title",
   "urlField": "url",
   "resultFields": [
-    "meta_description"
+    "description",
+    "keywords"
   ],
   "querySuggestFields": [
-    "meta_keywords",
-    "meta_description"
+    "keywords",
+    "description"
   ]
 }
