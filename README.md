@@ -60,9 +60,19 @@ output_sink: file
 output_dir: examples/output/aon
 ```
 
+
+Next, I made a new dir:
+
+```
+mkdir examples/output/aon-cleaned/
+```
+
 Then, I cleaned the raw crawl JSON:
 
 ```
+require 'json'
+require 'nokogiri'
+
 output_dir = 'examples/output/aon-cleaned/'
 input_dir = 'examples/output/aon/'
 Dir.foreach(input_dir) do |filename|
