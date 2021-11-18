@@ -52,10 +52,28 @@ I scraped it using the [Elastic App Search Crawler](https://www.elastic.co/guide
 First, I ran the crawler in local mode, with a config like:
 
 ```
+max_indexed_links_count: 1000
+max_extracted_links_count: 10000
+max_url_length: 70
+max_crawl_depth: 10
 domain_allowlist:
   - https://2e.aonprd.com
 seed_urls:
-  - https://2e.aonprd.com/
+  - https://2e.aonprd.com/Actions.aspx
+  - https://2e.aonprd.com/Afflictions.aspx
+  - https://2e.aonprd.com/Ancestries.aspx
+  - https://2e.aonprd.com/Archetypes.aspx
+  - https://2e.aonprd.com/Backgrounds.aspx
+  - https://2e.aonprd.com/Classes.aspx
+  - https://2e.aonprd.com/Conditions.aspx
+  - https://2e.aonprd.com/Creatures.aspx
+  - https://2e.aonprd.com/Equipment.aspx?All=true
+  - https://2e.aonprd.com/Feats.aspx
+  - https://2e.aonprd.com/Hazards.aspx
+  - https://2e.aonprd.com/Rules.aspx
+  - https://2e.aonprd.com/Skills.aspx
+  - https://2e.aonprd.com/SpellLists.aspx?Tradition=0
+  - https://2e.aonprd.com/Traits.aspx
 output_sink: file
 output_dir: examples/output/aon
 ```
@@ -90,6 +108,7 @@ Dir.foreach(input_dir) do |filename|
   description = parsed_data.at('meta[name=description]')['content']
   description = Nokogiri::HTML(description)&.text
   body_content = parsed_data.at_css('[id="ctl00_MainContent_DetailedOutput"]')&.text
+  body_content = parsed_data.at_css('[id="ctl00_RadDrawer1_Content_MainContent_DetailedOutput"]')&.text unless body_content
   result = {
     :title => title,
     :category => category,
