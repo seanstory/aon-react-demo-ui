@@ -1,6 +1,6 @@
 {
   "engineName": "aon-non-crawl",
-  "endpointBase": "https://af6fbe75a35a46b897e0f810b29b4fc0.ent-search.europe-west1.gcp.cloud.es.io",
+  "endpointBase": "https://aon-replacement.ent.europe-west1.gcp.cloud.es.io",
   "searchKey": "search-9hw5iyis8d4yhz6aq5zx5otz",
   "sortFields": [
 
