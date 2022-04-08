@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/aon-react-demo-ui/precache-manifest.c3fca64c82dc6c54a75e827d3ae6aefa.js"
+  "/aon-react-demo-ui/precache-manifest.56068d7578ea5445f0174365f39f2d3d.js"
 );
 
 self.addEventListener('message', (event) => {
