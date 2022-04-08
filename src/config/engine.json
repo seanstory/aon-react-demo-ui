@@ -14,7 +14,8 @@
   "urlField": "url",
   "resultFields": [
     "description",
-    "keywords"
+    "keywords",
+    "body"
   ],
   "querySuggestFields": [
     "keywords",
