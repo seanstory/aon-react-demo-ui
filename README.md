@@ -74,6 +74,10 @@ seed_urls:
   - https://2e.aonprd.com/Skills.aspx
   - https://2e.aonprd.com/SpellLists.aspx?Tradition=0
   - https://2e.aonprd.com/Traits.aspx
+  - https://2e.aonprd.com/Rules.aspx?ID=1483
+  - https://2e.aonprd.com/Rules.aspx?ID=748
+  - https://2e.aonprd.com/Rules.aspx?ID=1587
+  - https://2e.aonprd.com/Rules.aspx?ID=686
 output_sink: file
 output_dir: examples/output/aon
 ```
