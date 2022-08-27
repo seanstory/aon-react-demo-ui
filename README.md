@@ -1,4 +1,4 @@
-# Archives of Nethys Search Engine
+# [Archives of Nethys Search Engine](https://seanstory.github.io/aon-react-demo-ui/)
 
 A configurable, generic search UI for Archives of Nethys
 Built with Elastic App Search's Reference UI.
