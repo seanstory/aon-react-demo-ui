@@ -130,10 +130,10 @@ rescue StandardError => e
 end
 ```
 
-Then, I used the [App Search Ruby Client](https://www.elastic.co/guide/en/enterprise-search-clients/ruby/current/app-search-api.html) to index the cleaned json
+Then, I used the [App Search Ruby Client](https://www.elastic.co/guide/en/enterprise-search-clients/ruby/current/app-search-api.html)  (`gem install elastic-enterprise-search`) to index the cleaned json
 
 ```
-require 'elastic/enterprise_search'
+require 'elastic-enterprise-search'
 
 host = <host>
 key = <private key>
