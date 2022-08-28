@@ -145,19 +145,40 @@ engine_name = 'aon-non-crawl'
 documents = []
 batch = 1
 output_dir = 'examples/output/aon-cleaned/'
+batch_ids = {}
 Dir.foreach(output_dir) do |filename|
   next if filename == '.' or filename == '..'
   document = JSON.parse(File.read("#{output_dir}#{filename}"))
-  document[:id] = filename
-  documents << document
+  document[:id] = document.dup.slice('title', 'category', 'keywords', 'description', 'body').hash.to_s
+  unless batch_ids.keys.include?(document[:id])
+    documents << document
+    batch_ids[document[:id]] = true
+  end
   if documents.size == 100
     puts "indexing batch #{batch}"
     client.index_documents(engine_name, documents: documents)
     documents = []
+    batch_ids = {}
     batch = batch + 1
   end
 end
 client.index_documents(engine_name, documents: documents)
+```
+
+If something went wrong, and we wanted to delete the engine contents without deleting the engine itself, we can run:
+
+```
+batch = 0
+loop do
+  batch += 1
+  result = client.list_documents(engine_name)
+  ids = result.body['results'].map{|it| it['id']}
+  if ids.empty?
+    break
+  end
+  puts "Deleting batch #{batch}"
+  client.delete_documents(engine_name, document_ids: ids)
+end
 ```
 
 ## License 📗
